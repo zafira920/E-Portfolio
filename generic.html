@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Stellar by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Apply custom cursor to all elements */
+			a, .clickable {
+				cursor: url("images/cat paw pointer (1).png"), auto !important;
+			}
+			/* Style for the hidden image galleries */
+			.image-gallery {
+        display: none;
+        margin-top: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px; 
+		display: grid;
+      }
+      .image-gallery img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      .clickable {
+        color: #00f;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+	  /* Add a smooth scroll effect */
+	  html{ scroll-behavior: smooth;
+	}
+	  /* Hide the image galleries on initial page load */
+	  .image-gallery.hidden{
+		display: none;
+	  }
+	</style>
+	
+    <script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Initially hide all image galleries
+			document.querySelectorAll('.image-gallery').forEach(gallery => {
+				gallery.classList.add('hidden');
+			});
+	
+			// Add click event listeners to all links with the 'clickable' class
+			document.querySelectorAll('.clickable').forEach(link => {
+				link.addEventListener('click', function (event) {
+					event.preventDefault(); // Prevent default anchor behavior
+	
+					// Hide all galleries first
+					document.querySelectorAll('.image-gallery').forEach(gallery => {
+						gallery.classList.add('hidden');
+					});
+	
+					// Get the target section ID and gallery ID
+					const targetSectionID = this.getAttribute('data-target');
+					const gallery = document.getElementById(`${targetSectionID}-gallery`);
+	
+					// Show the gallery if it exists
+					if (gallery) {
+						gallery.classList.remove('hidden');
+					}
+	
+					// Smooth scroll to the target section
+					const targetSection = document.getElementById(targetSectionID);
+					if (targetSection) {
+						targetSection.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						});
+					}
+				});
+			});
+		});
+	</script>
+	</head>
+	<body class="is-preload"
+	style="background-image: url('images/purple-glitter-background-glistening-texture-a-captivating-abstract_9979649.jpg!sw800'); 
+             background-size: cover; 
+             background-repeat: no-repeat; 
+             background-attachment: fixed; 
+             background-position: center;">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" style="background: url('images/7e4d090d78c8d007add923cf47c1e052.jpg') no-repeat center center; background-size: cover;">
+						<h1><strong>My Background</strong></h1>
+						<p><strong>In this page, I will share my personal interests, future aspirations, achievements beyond academics and the inspirations that drive me.</strong></p>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<span class="image main" style="width: 1195px; height: 450px; overflow: hidden;">
+									<img src="images/nion background.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
+								</span>
+
+								<h2><strong>My Life</strong></h2>
+								<p>I was born in the historic city of Melaka, a place rich in culture and history. I am the youngest of four siblings, and being the "baby" of the family has been both a joy and a challenge. It meant growing up with strong role models to look up to and learning how to stand out in my way.</p>
+								<p>I began my schooling at SK Batu Berendam and continued my secondary education at SMK Ayer Keroh. Afterward, I pursued a Foundation in physical science at Universiti Teknologi Malaysia(UTM), where I am currently studying for my Bachelor's Degree in Data Engineering. A place of study feels like a second home to me. <a href="#" class="clickable" data-target="school">My school life</a> has been an exciting journey, where I have had the opportunity to explore new subjects, participate in various activities, and make friends.</p>
+								
+								<h2><strong>My Personal Interest</strong></h2>
+								<p><strong>My interests are all about creativity and curiosity.</strong> I love <a href="#" class="clickable" data-target="photography">photography</a> because it lets me capture moments that tell interesting stories. I also enjoy reading books, like <a href="#" class="clickable" data-target="kapal">Kapal Terakhir di Dunia</a> by Teme Abdullah, which makes me use my imagination to really dive into the story. Along with reading,<strong>I like to do research</strong> , as I’m always eager to learn more.</p>
+								<p>Another hobby of mine is <strong>playing video games</strong> such as <a href="#" class="clickable" data-target="genshin">Genshin Impact</a>. I enjoy games that are full of action, mystery, adventure, and science because they get me thinking and imagining new things. These games spark my curiosity, making me want to learn more about the world around me. Both photography and gaming are activities that require a lot of imagination, and they help me explore different ideas and perspectives.</p>
+								<h2><strong>My Personality</strong></h2>
+								<p>I am a<strong> shy person</strong>, but I have learned to overcome my fears. How? During my education, making presentation was a regular part of learning. Through this process, I developed the courage to <a href="#" class="clickable" data-target="speak in front of others">speak in front of others</a> speak in front of others. Now, I can talk confidently in public as long as I am prepared beforehand. This journey has taught me that growth comes from stepping out of my comfort zone.</p>
+								<p>I <strong>enjoy working alone</strong> because it allows me to focus better, but that doesn't mean I dislike <a href="#" class="clickable" data-target="teamwork">teamwork</a>. In fact, I am often chosen as the leader in group projects because I am open-minded, value others' opinions, and manage time well. Leading teams has helped me build leadership skills, improve my communication, and work effectively with others. These experiences have shaped me into someone who can adapt to different situations and connect with people.</p>
+								<p>I also <strong>love trying new things</strong>, even if they are outside my area of expertise. Exploring something new makes me think creatively and keeps me engaged in meaningful activities during my free time.For example, in July 2024, I was an <a href="#" class="clickable" data-target="admin">admin for labcoat Asprintzz Legacy</a> , where I handled preorders, found customers, and managed sales. I gained experience in customer communication, time management, and organizational skills. It encourages me to research and learn until I truly understand the subject. This habit not only helps me grow but also fuels my curiosity and creativity.</p>
+								<!-- Hidden Image Galleries -->
+
+								<section id="school">
+									<h3>My School Life Gallery</h3>
+								<div id="school-gallery" class="image-gallery">
+									<img src="images/photo_2025-01-05_11-42-17.jpg" alt="School 1" />
+									<img src="images/photo_2025-01-05_11-42-22.jpg" alt="School 2" />
+									<img src="images/photo_2025-01-05_11-42-25.jpg" alt="School 3"  style="width: 320px; height: 240px;"/>
+									<img src="images/photo_2025-01-05_11-42-32.jpg" alt="School 4" />
+									<img src="images/photo_2025-01-05_11-42-34.jpg" alt="School 5" />
+									<img src="images/photo_2025-01-05_11-42-38.jpg" alt="School 6"  style="width: 320px; height: 240px;"/>
+								  </div>
+								</section>
+
+								 <section id="photography">
+									<h3>Photography Gallery</h3>
+								<div id="photography-gallery" class="image-gallery">
+									<img src="images/photo_2025-01-05_00-52-49.jpg" alt="Photo 1" />
+									<img src="images/photo_2025-01-05_00-52-54.jpg" alt="Photo 2" style="width: 320px; height: 323px;" />
+									<img src="images/stadium.jpg" alt="Photo 3" />
+								  </div>
+								</section>
+
+									<section id="kapal">
+										<h3>Kapal Terakhir di Dunia Gallery</h3>
+								  <div id="kapal-gallery" class="image-gallery">
+									<img src="images/photo_2025-01-05_00-52-58.jpg" alt="Kapal 1" style="width: 320px; height: 323px;" />
+								  </div>
+								</section>
+						
+								  <section id="genshin">
+									<h3>Genshin Impact Gallery</h3>
+									<div id="genshin-gallery" class="image-gallery">
+									<img src="images/photo_2025-01-05_00-53-05.jpg" alt="Genshin 1" />
+									<img src="images/photo_2025-01-05_00-53-09.jpg" alt="Genshin 2" style="width: 320px; height: 226px;" />
+									<img src="images/photo_2025-01-05_00-53-12.jpg" alt="Genshin 3" />
+								  </div>
+								</section>
+
+								<section id="speak in front of others">
+									<h3>Speak in Front of Others Gallery</h3>
+								  <div id="speak in front of others-gallery" class="image-gallery">
+									<img src="images/photo_2025-01-05_00-58-01.jpg" alt="Presentation 1" style="width: 320px; height: 323px;"/>
+									<img src="images/photo_2025-01-05_00-58-03.jpg" alt="Presentation 2" style="width: 320px; height: 323px;"/>
+								  </div>
+								</section>
+
+								<section id="teamwork">
+									<h3>Teamwork Gallery</h3>
+								  <div id="teamwork-gallery" class="image-gallery">
+									<img src="images/photo_2025-01-05_01-01-16.jpg" alt="Teamwork 1" style="width: 320px; height: 323px;" />
+									<img src="images/photo_2025-01-05_01-01-19.jpg" alt="Teamwork 2" style="width: 320px; height: 323px;" />
+									</div>
+								</section>
+
+								<section id="admin">
+									<h3>Admin for labcoat Asprintzz Legacy Gallery</h3>
+									<div id="admin-gallery" class="image-gallery">
+									<img src="images/photo_2025-01-05_10-35-15.jpg" alt="Admin 1" />
+									<img src="images/photo_2025-01-05_10-35-18.jpg" alt="Admin 2" style="width: 320px; height: 320px;" />
+									<img src="images/photo_2025-01-05_10-35-37.jpg" alt="Admin 3" style="width: 320px; height: 320px;" />
+								  </div>
+								</section>
+
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				 <header id="header" style="background: url('images/7e4d090d78c8d007add923cf47c1e052.jpg') no-repeat center center; background-size: cover;">
+				<footer id="footer">
+					<section>
+						<h2>Technology and Information System</h2>
+						<p>Technology and Information Systems refer to the tools, software, and processes used to collect, store, manage, and share information efficiently.
+							They help organizations make better decisions, improve operations, and communicate effectively through digital platforms.
+							Examples include database systems, cloud computing, and apps that enable businesses to manage data and deliver services seamlessly.
+						</p>
+						<ul class="actions">
+							<li><a href="https://www.managementstudyguide.com/information-system-and-information-technology.htm" class="button" target="_blank">Learn More</a></li>
+						</ul>
+					</section>
+						<section>
+							<h2>Information</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>Universiti Teknology Malaysia,81310 Johor Bahru, Johor, Malaysia</dd>
+								<dt>Phone</dt>
+								<dd>(+60) 19-8220148</dd>
+								<dt>LinkedIn</dt>
+								<dd><a href="https://www.linkedin.com/in/damia-zafira-nawawi-5b6402330/" target="_blank">Damia Zafira Binti Nawawi</a></dd>
+								<dt>Github</dt>
+								<dd><a href="https://github.com/zafira920" target="_blank">zafira920</a></dd>
+								<dt>Email</dt>
+								<dd><a href="mailto:dznawawi965@gmail.com">dznawawi965@gmail.com</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/damia-zafira-nawawi-5b6402330/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/zafira920" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="mailto:dznawawi965@gmail.com" class="icon solid fa-envelope alt"><span class="label">Gmail</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
